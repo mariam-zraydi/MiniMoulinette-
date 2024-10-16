@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codebind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:25:34 by codebind          #+#    #+#             */
-/*   Updated: 2024/10/14 21:39:23 by codebind         ###   ########.fr       */
+/*   Created: 2024/10/15 22:00:33 by codebind          #+#    #+#             */
+/*   Updated: 2024/10/16 13:41:39 by codebind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+ #include <unistd.h>
 
-void ft_is_negative(int n)
-
+void ft_putnbr(int nb)
 {
-	if(n < 0)
-	{
-	write(1, "N", 1);
-	}
-	 if(n > 0)
-	{
-	write(1, "P", 1);
-	}
+    if (nb == -2147483648)     
+    {
+        write(1, "-2147483648", 11);
+        
+    }
+    if (nb < 0) 
+    {
+        write(1, "-", 1);  
+        nb = -nb;  
+    }
+    
+    if (nb >= 10)  
+    {
+        ft_putnbr(nb / 10);  
+    }
+    
+    
+    char digit = (nb % 10) + '0'; 
+    write(1, &digit, 1);  
 }
 
-int main(void)
+int main()
 {
-	ft_is_negative(-15);
+	ft_putnbr(-2147483648);
 	return 0;
 }
 

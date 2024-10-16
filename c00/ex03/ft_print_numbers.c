@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: codebind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 20:32:54 by codebind          #+#    #+#             */
-/*   Updated: 2024/10/07 20:49:36 by codebind         ###   ########.fr       */
+/*   Created: 2024/10/14 18:29:12 by codebind          #+#    #+#             */
+/*   Updated: 2024/10/14 18:43:35 by codebind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 void ft_print_numbers(void)
 
 {
-	char i = '0';
-	while(i <= '9')
-   {
-	write(1, &i, 1);
-	i++;
-   }
-
+	int nbr = 48;
+	
+	while(nbr <= 57)
+	{
+	write(1, &nbr, 1);
+	nbr++;
+	}
 }
 int main(void)
 {
-    ft_print_numbers(); // Call the function to print numbers
-    return 0;
+	ft_print_numbers();
+	return 0;
 }

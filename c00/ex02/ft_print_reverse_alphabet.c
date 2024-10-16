@@ -5,27 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: codebind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 16:57:03 by codebind          #+#    #+#             */
-/*   Updated: 2024/10/07 21:35:59 by codebind         ###   ########.fr       */
+/*   Created: 2024/10/14 17:44:00 by codebind          #+#    #+#             */
+/*   Updated: 2024/10/16 13:48:41 by codebind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
-{
-	char	digit;
+void ft_print_reverse_alphabet(void)
 
-	digit = '0';
-	while (digit <= '9')
+{
+	int letter = 122;
+	
+	while(letter >= 97)
 	{
-		write(1, &digit, 1);
-		digit++;
+	write(1, &letter, 1);
+	letter--;
 	}
 }
-
-int	main(void)
+int main (void)
 {
-	ft_print_numbers();
-	return (0);
+	ft_print_reverse_alphabet();
+	return 0;
 }
+

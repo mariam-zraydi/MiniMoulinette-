@@ -5,27 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: codebind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/05 21:01:13 by codebind          #+#    #+#             */
-/*   Updated: 2024/10/06 14:37:44 by codebind         ###   ########.fr       */
+/*   Created: 2024/10/14 15:11:56 by codebind          #+#    #+#             */
+/*   Updated: 2024/10/14 16:00:09 by codebind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
-{
-	char	letter;
+void ft_print_alphabet(void)
 
-	letter = 'a';
-	while (letter <= 'z')
+{
+	int letter;
+	letter = 97;
+
+	while(letter <= 122)
 	{
-		write(1, &letter, 1);
-		letter++;
-	}
+	write(1, &letter, 1);
+	letter++;
+        }
+
 }
 
-int	main(void)
+int main(void)
+
 {
-	ft_print_alphabet();
-	return (0);
+        ft_print_alphabet();
+	return 0;
 }
